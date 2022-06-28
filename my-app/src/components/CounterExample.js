@@ -5,7 +5,6 @@ function CounterExample() {
 
     return(
         <div>
-
             <h1>
                 {count}
             </h1>
