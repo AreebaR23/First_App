@@ -1,8 +1,13 @@
 import React from 'react'
 import HelloWorld from './components/HelloWorld'
 import Header from './components/Header'
-import CounterExample from './components/CounterExample'
+// import CounterExample from './components/CounterExample'
 import Footer from './components/Footer'
+import Home from './Views/Home'
+import About from './Views/About'
+import Product from './Views/Product'
+import Navigation from './components/Navigation'
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,28 +18,20 @@ import {
 function App() {
   return (
    <div>
+       
+    <Router>
+      <Header/>
+        {/* Fix routing issues */}
+        <div className="p-3">
+          <Routes>
+            <Route path="/home" element={<Home />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/product/:id" element={<Product />}/>
+          </Routes>
+        </div> 
+        <Footer/>
+    </Router>
 
-    <Header/>
-       <HelloWorld name=" Reeba"/>
-      {/* <CounterExample/> */}
-      <Router>
-      <ul>
-        <li><Link to = "/" className ="text-blue-500">Homepage</Link></li>
-        <li><Link to = "/about" className ="text-blue-500">About</Link></li>
-      </ul>
-      {/* <Routes>
-        <Route path="/" element={<App />}>
-          <h1 className="font-bold-text-2xl">This is the homepage</h1>
-        </Route>
-        <Route path="/about" element={<App />}>
-          <h1 className="font-bold-text-2xl" >This is the About page</h1>
-        </Route>
-
-      </Routes> */}
-
-      </Router>
-
-      <Footer/>
    </div>
   );
 }

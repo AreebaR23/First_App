@@ -478,6 +478,10 @@ video {
   z-index: 50;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -510,6 +514,10 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -526,6 +534,11 @@ video {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .text-center {
